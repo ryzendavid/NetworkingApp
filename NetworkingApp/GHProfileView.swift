@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct GHProfileView: View {
     
     @State var user: GHUser?
     var body: some View {
         
         NavigationStack {
-            VStack (spacing: 20){
+            VStack (spacing: 2){
                 AsyncImage(url: URL(string: user?.avatarUrl ?? "")) { image in
                     image
                         .resizable()
@@ -83,5 +83,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    GHProfileView()
 }
